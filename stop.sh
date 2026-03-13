@@ -4,7 +4,7 @@ REGION="us-east-2"
 
 INSTANCE_IDS=$(aws ec2 describe-instances \
   --region "$REGION" \
-  --filters "Name=tag:autoschedule,Values=true" "Name=instance-state-name,Values=running" \
+  --filters "Name=tag:autorestart,Values=true" "Name=instance-state-name,Values=running" \
   --query "Reservations[*].Instances[*].InstanceId" \
   --output text)
 
