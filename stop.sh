@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REGION="east-us-2"
+REGION="us-east-2"
 
 INSTANCE_IDS=$(aws ec2 describe-instances \
   --region "$REGION" \
